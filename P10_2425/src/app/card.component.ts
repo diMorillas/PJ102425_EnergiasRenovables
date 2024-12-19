@@ -6,7 +6,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule],  
   template: `
-    <!-- Sección de Energías Renovables -->
+    <!-- Sección de Energías Renovables. Usamos un nfFor para generarlas con los datos. Le pasamos la plantilla e iteramos sobre el array-->
     <h2>Energías Renovables</h2>
     <div class="card-container">
       <div class="card" *ngFor="let energy of renewableEnergies">
