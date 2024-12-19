@@ -61,24 +61,6 @@ import { Component } from '@angular/core';
           </ul>
         </div>
       </div>
-
-      <!-- Biomasa -->
-      <div class="card">
-        <img src="biomasa.jpg" alt="Biomasa" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title">Biomasa</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Aprovecha los residuos orgánicos</h6>
-          <p class="card-text">La biomasa convierte los residuos orgánicos en energía.</p>
-          <ul>
-            <li><strong>Coste de uso promedio:</strong> 0.07 €/kWh</li>
-            <li><strong>Coste de instalación:</strong> 2,000 € - 5,000 €</li>
-            <li><strong>Años de duración:</strong> 20 - 30 años</li>
-            <li><strong>Emisiones de CO2:</strong> 15 - 50 g/kWh</li>
-            <li><strong>Continente con mayor producción:</strong> América del Norte</li>
-            <li><strong>Continente con menor producción:</strong> Oceanía</li>
-          </ul>
-        </div>
-      </div>
     </div>
 
     <!-- Sección de Energías No Renovables -->
@@ -116,6 +98,24 @@ import { Component } from '@angular/core';
             <li><strong>Emisiones de CO2:</strong> 450 - 500 g/kWh</li>
             <li><strong>Continente con mayor producción:</strong> Asia</li>
             <li><strong>Continente con menor producción:</strong> África</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Carbón -->
+      <div class="card">
+        <img src="carbon.webp" alt="Carbón" class="card-img-top">
+        <div class="card-body">
+          <h5 class="card-title">Carbón</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Energía fósil</h6>
+          <p class="card-text">El carbón es un recurso no renovable utilizado ampliamente para generar electricidad.</p>
+          <ul>
+            <li><strong>Coste de uso promedio:</strong> 0.09 €/kWh</li>
+            <li><strong>Coste de instalación:</strong> 4,000 € - 12,000 €</li>
+            <li><strong>Años de duración:</strong> 25 - 40 años</li>
+            <li><strong>Emisiones de CO2:</strong> 800 - 1,100 g/kWh</li>
+            <li><strong>Continente con mayor producción:</strong> Asia</li>
+            <li><strong>Continente con menor producción:</strong> Oceanía</li>
           </ul>
         </div>
       </div>
