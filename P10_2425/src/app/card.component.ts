@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-card',
   standalone: true,
   template: `
-    <h1>Tipos de Energías</h1>
 
     <!-- Sección de Energías Renovables -->
     <h2>Energías Renovables</h2>
