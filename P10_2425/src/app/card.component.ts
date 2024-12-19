@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';  // Importa CommonModule
+import { CommonModule } from '@angular/common';  
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [CommonModule],  // Asegúrate de importar CommonModule
+  imports: [CommonModule],  
   template: `
     <!-- Sección de Energías Renovables -->
     <h2>Energías Renovables</h2>
