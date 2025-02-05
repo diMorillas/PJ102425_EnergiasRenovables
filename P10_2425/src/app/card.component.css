@@ -5,6 +5,7 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
+    flex-direction: row;
   }
   
   .card-container {
@@ -66,5 +67,11 @@
 }
 
 .custom-select {
-  width: 400px; 
+  width: 500px; 
+}
+
+.select{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }

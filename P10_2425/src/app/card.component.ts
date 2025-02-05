@@ -24,7 +24,7 @@ export interface Energia {
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [CommonModule, FormsModule, OrdenarCostePipe, MatFormFieldModule, MatSelectModule,MatFormFieldModule],
+  imports: [CommonModule, FormsModule, OrdenarCostePipe, MatFormFieldModule, MatSelectModule,MatFormFieldModule,MatInputModule],
   templateUrl: 'card.component.html',
   styleUrls: ['card.component.css']
 })
@@ -102,4 +102,6 @@ export class CardComponent {
       energy[this.selectedFilter]?.toLowerCase().includes(this.filterValue.toLowerCase())
     );
   }
+
+  selected = 'titulo';
 }
