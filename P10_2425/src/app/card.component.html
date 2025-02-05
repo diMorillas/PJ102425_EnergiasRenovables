@@ -1,15 +1,16 @@
 
 <!-- Formulario de Filtro -->
 <div class="filter-container">
-  <label for="filterKey">Filtrar por:</label>
+  <div class="select">
   <mat-form-field>
+  <mat-label>Filtro:</mat-label>
   <mat-select [(value)]="selectedFilter" class="custom-select">
     <mat-option *ngFor="let key of filterKeys" [value]="key">
-      {{ key }}
+      {{ key.toUpperCase() }}
     </mat-option>
   </mat-select>
 </mat-form-field>
-
+</div>
   <input type="text" [(ngModel)]="filterValue" placeholder="Ingrese el valor..." />
 </div>
 

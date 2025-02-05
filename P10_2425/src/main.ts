@@ -17,6 +17,6 @@ bootstrapApplication(AppComponent, {
       MatButtonModule,
       MatToolbarModule
     ),
-    provideAnimationsAsync(),
+    provideAnimationsAsync(), provideAnimationsAsync(),
   ],
 }).catch((err) => console.error(err));
