@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-    name: 'emisiones'
+    name: 'emisiones',
+    standalone: true
 })
 export class EmisionesPipe implements PipeTransform {
     transform(consumoKWh: number, CO2NoRenovable: number = 0.4, CO2Renovable: number = 0.02): number {
