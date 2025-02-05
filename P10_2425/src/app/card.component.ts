@@ -3,18 +3,19 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { OrdenarCostePipe } from './pipe/ordenarCoste.pipe';
 
-export interface Energy {
-  title: string;
-  subtitle: string;
-  description: string;
-  costOfUse: string;
-  installationCost: string;
-  duration: string;
-  co2Emissions: string;
-  continentMaxProduction: string;
-  continentMinProduction: string;
-  img: string;
+interface Energia {
+  titulo: string;
+  subtitulo: string;
+  descripcion: string;
+  costoDeUso: string;
+  costoDeInstalacion: string;
+  duracion: string;
+  emisionesCo2: string;
+  continenteMaxProduccion: string;
+  continenteMinProduccion: string;
+  imagen: string;
 }
+
 
 @Component({
   selector: 'app-card',
@@ -24,69 +25,69 @@ export interface Energy {
   styleUrls: ['card.component.css']
 })
 export class CardComponent {
-  filterKeys: (keyof Energy)[] = [
-    'title', 'subtitle', 'costOfUse', 'installationCost', 
-    'duration', 'co2Emissions', 'continentMaxProduction', 'continentMinProduction'
+  filterKeys: (keyof Energia)[] = [
+    'titulo', 'subtitulo', 'costoDeUso', 'costoDeInstalacion',
+    'duracion', 'emisionesCo2', 'continenteMaxProduccion', 'continenteMinProduccion'
   ];
   
-  selectedFilter: keyof Energy = 'title';
+  selectedFilter: keyof Energia = 'titulo';
   filterValue: string = '';
 
-  renewableEnergies: Energy[] = [
+  renewableEnergies: Energia[] = [
     {
-      title: 'Energía Solar',
-      subtitle: 'Aprovecha la energía del sol',
-      description: 'La energía solar es una de las fuentes renovables más limpias y abundantes.',
-      costOfUse: '0.05 €/kWh',
-      installationCost: '1,200 € - 3,000 €',
-      duration: '25 - 30 años',
-      co2Emissions: '0 g/kWh',
-      continentMaxProduction: 'Asia',
-      continentMinProduction: 'Europa',
-      img: 'solar.jpg'
+      titulo: 'Energía Solar',
+      subtitulo: 'Aprovecha la energía del sol',
+      descripcion: 'La energía solar es una de las fuentes renovables más limpias y abundantes.',
+      costoDeUso: '0.05 €/kWh',
+      costoDeInstalacion: '1,200 € - 3,000 €',
+      duracion: '25 - 30 años',
+      emisionesCo2: '0 g/kWh',
+      continenteMaxProduccion: 'Asia',
+      continenteMinProduccion: 'Europa',
+      imagen: 'solar.jpg'
     },
     {
-      title: 'Energía Eólica',
-      subtitle: 'Aprovecha el viento para generar electricidad',
-      description: 'La energía eólica es una fuente renovable que aprovecha el viento.',
-      costOfUse: '0.03 €/kWh',
-      installationCost: '1,500 € - 4,000 €',
-      duration: '20 - 25 años',
-      co2Emissions: '0 g/kWh',
-      continentMaxProduction: 'Europa',
-      continentMinProduction: 'África',
-      img: 'eolica.jpg'
+      titulo: 'Energía Eólica',
+      subtitulo: 'Aprovecha el viento para generar electricidad',
+      descripcion: 'La energía eólica es una fuente renovable que aprovecha el viento.',
+      costoDeUso: '0.03 €/kWh',
+      costoDeInstalacion: '1,500 € - 4,000 €',
+      duracion: '20 - 25 años',
+      emisionesCo2: '0 g/kWh',
+      continenteMaxProduccion: 'Europa',
+      continenteMinProduccion: 'África',
+      imagen: 'eolica.jpg'
     }
   ];
-
-  nonRenewableEnergies: Energy[] = [
+  
+  nonRenewableEnergies: Energia[] = [
     {
-      title: 'Petróleo',
-      subtitle: 'Fuente no renovable',
-      description: 'El petróleo es un recurso no renovable utilizado para generar energía.',
-      costOfUse: '0.10 €/kWh',
-      installationCost: '5,000 € - 10,000 €',
-      duration: '15 - 20 años',
-      co2Emissions: '700 - 800 g/kWh',
-      continentMaxProduction: 'Asia',
-      continentMinProduction: 'Europa',
-      img: 'petroleo.jpg'
+      titulo: 'Petróleo',
+      subtitulo: 'Fuente no renovable',
+      descripcion: 'El petróleo es un recurso no renovable utilizado para generar energía.',
+      costoDeUso: '0.10 €/kWh',
+      costoDeInstalacion: '5,000 € - 10,000 €',
+      duracion: '15 - 20 años',
+      emisionesCo2: '700 - 800 g/kWh',
+      continenteMaxProduccion: 'Asia',
+      continenteMinProduccion: 'Europa',
+      imagen: 'petroleo.jpg'
     },
     {
-      title: 'Gas',
-      subtitle: 'Energía fósil',
-      description: 'El gas natural es una fuente fósil de energía que se utiliza en calefacción y electricidad.',
-      costOfUse: '0.08 €/kWh',
-      installationCost: '3,000 € - 8,000 €',
-      duration: '20 - 30 años',
-      co2Emissions: '450 - 500 g/kWh',
-      continentMaxProduction: 'Asia',
-      continentMinProduction: 'África',
-      img: 'gas.webp'
+      titulo: 'Gas',
+      subtitulo: 'Energía fósil',
+      descripcion: 'El gas natural es una fuente fósil de energía que se utiliza en calefacción y electricidad.',
+      costoDeUso: '0.08 €/kWh',
+      costoDeInstalacion: '3,000 € - 8,000 €',
+      duracion: '20 - 30 años',
+      emisionesCo2: '450 - 500 g/kWh',
+      continenteMaxProduccion: 'Asia',
+      continenteMinProduccion: 'África',
+      imagen: 'gas.webp'
     }
   ];
-
-  filteredEnergies(): Energy[] {
+  
+  filteredEnergies(): Energia[] {
     const allEnergies = [...this.renewableEnergies, ...this.nonRenewableEnergies];
 
     if (!this.filterValue.trim()) {
