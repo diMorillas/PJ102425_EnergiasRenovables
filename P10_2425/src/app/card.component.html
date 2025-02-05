@@ -1,0 +1,30 @@
+<!-- Formulario de Filtro -->
+<div class="filter-container">
+    <label for="filterKey">Filtrar por:</label>
+    <select id="filterKey" [(ngModel)]="selectedFilter">
+      <option *ngFor="let key of filterKeys" [value]="key">{{ key }}</option>
+    </select>
+  
+    <input type="text" [(ngModel)]="filterValue" placeholder="Ingrese el valor..." />
+  </div>
+  
+  <!-- Sección de Energías -->
+  <h2>Energías Disponibles</h2>
+  <div class="card-container">
+    <div class="card" *ngFor="let energy of filteredEnergies() | ordenarCoste:'asc'">
+      <img [src]="energy.img" [alt]="energy.title" class="card-img-top">
+      <div class="card-body">
+        <h5 class="card-title">{{ energy.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ energy.subtitle }}</h6>
+        <p class="card-text">{{ energy.description }}</p>
+        <ul>
+          <li><strong>Coste de uso:</strong> {{ energy.costOfUse }}</li>
+          <li><strong>Coste de instalación:</strong> {{ energy.installationCost }}</li>
+          <li><strong>Años de duración:</strong> {{ energy.duration }}</li>
+          <li><strong>Emisiones de CO2:</strong> {{ energy.co2Emissions }}</li>
+          <li><strong>Continente con mayor producción:</strong> {{ energy.continentMaxProduction }}</li>
+          <li><strong>Continente con menor producción:</strong> {{ energy.continentMinProduction }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>  
