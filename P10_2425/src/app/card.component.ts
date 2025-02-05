@@ -103,5 +103,5 @@ export class CardComponent {
     );
   }
 
-  selected = 'titulo';
+
 }
