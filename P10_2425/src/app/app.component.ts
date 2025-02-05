@@ -1,16 +1,13 @@
 import { Component } from '@angular/core';
-import { NavegatorComponent } from './nav.app.component';
-import { CardComponent } from './card.component';
+import { FooterComponent } from './footer.app.component';  
+import { NavegatorComponent } from './nav.app.component';  
+import { RouterModule } from '@angular/router';  
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [NavegatorComponent, CardComponent],
-  template: `
-    <app-nav></app-nav> 
-    <main>
-      <app-card></app-card>
-    </main>
-  `
+  imports: [FooterComponent, NavegatorComponent, RouterModule],  
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {}
+export class AppComponent { }
