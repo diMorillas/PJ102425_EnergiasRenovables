@@ -1,15 +1,15 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Energy } from '../card.component';  // Asegúrate de usar la ruta correcta
+import { Energia } from '../card.component';  // Asegúrate de usar la ruta correcta
 
 @Pipe({
   name: 'ordenarCoste',
   standalone: true
 })
 export class OrdenarCostePipe implements PipeTransform {
-  transform(energias: Energy[], orden: 'asc' | 'desc' = 'asc'): Energy[] {
+  transform(energias: Energia[], orden: 'asc' | 'desc' = 'asc'): Energia[] {
     return energias.sort((a, b) => {
-      const costA = parseFloat(a.costOfUse.replace(' €/kWh', '').replace(',', '.'));
-      const costB = parseFloat(b.costOfUse.replace(' €/kWh', '').replace(',', '.'));
+      const costA = parseFloat(a.costoDeUso.replace(' €/kWh', '').replace(',', '.'));
+      const costB = parseFloat(b.costoDeUso.replace(' €/kWh', '').replace(',', '.'));
       if (orden === 'asc') {
         return costA - costB;
       } else {

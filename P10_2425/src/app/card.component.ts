@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { OrdenarCostePipe } from './pipe/ordenarCoste.pipe';
 
-interface Energia {
+export interface Energia {
   titulo: string;
   subtitulo: string;
   descripcion: string;
