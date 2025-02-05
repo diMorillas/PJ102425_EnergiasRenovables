@@ -100,4 +100,18 @@ export class CardComponent {
       energy[this.selectedFilter]?.toLowerCase().includes(this.filterValue.toLowerCase())
     );
   }
+
+  energias: { value: string, viewValue: string }[] = [
+    ...this.renewableEnergies.map(energia => ({
+      value: energia.titulo, // Usar el título de la energía como valor
+      viewValue: energia.titulo // Usar el título de la energía como texto visible en el select
+    })),
+    ...this.nonRenewableEnergies.map(energia => ({
+      value: energia.titulo,
+      viewValue: energia.titulo
+    }))
+  ];
+
 }
+
+
