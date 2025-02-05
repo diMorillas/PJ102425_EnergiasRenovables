@@ -1,37 +1,32 @@
+
 <!-- Formulario de Filtro -->
 <div class="filter-container">
-    <label for="filterKey">Filtrar por:</label>
-    <mat-form-field>
-      <mat-label>Seleccionar Energía</mat-label>
-      <mat-select [(value)]="selectedFilter">
-        <mat-option *ngFor="let energia of energias" [value]="energia.value">
-          {{ energia.viewValue }}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-    
-  
-    <input type="text" [(ngModel)]="filterValue" placeholder="Ingrese el valor..." />
-  </div>
-  
-  <!-- Sección de Energías -->
-  <h2>Energías Disponibles</h2>
-  <div class="card-container">
-    <div class="card" *ngFor="let energia of filteredEnergies() | ordenarCoste:'asc'">
-      <img [src]="energia.imagen" [alt]="energia.titulo" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">{{ energia.titulo }}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{ energia.subtitulo }}</h6>
-        <p class="card-text">{{ energia.descripcion }}</p>
-        <ul>
-          <li><strong>Coste de uso:</strong> {{ energia.costoDeUso }}</li>
-          <li><strong>Coste de instalación:</strong> {{ energia.costoDeInstalacion }}</li>
-          <li><strong>Años de duración:</strong> {{ energia.duracion }}</li>
-          <li><strong>Emisiones de CO2:</strong> {{ energia.emisionesCo2 }}</li>
-          <li><strong>Continente con mayor producción:</strong> {{ energia.continenteMaxProduccion }}</li>
-          <li><strong>Continente con menor producción:</strong> {{ energia.continenteMinProduccion }}</li>
-        </ul>
-      </div>
+  <label for="filterKey">Filtrar por:</label>
+  <select id="filterKey" [(ngModel)]="selectedFilter">
+    <option *ngFor="let key of filterKeys" [value]="key">{{ key }}</option>
+  </select>
+
+  <input type="text" [(ngModel)]="filterValue" placeholder="Ingrese el valor..." />
+</div>
+
+<!-- Sección de Energías -->
+<h2>Energías Disponibles</h2>
+<div class="card-container">
+  <div class="card" *ngFor="let energia of filteredEnergies() | ordenarCoste:'asc'">
+    <img [src]="energia.imagen" [alt]="energia.titulo" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{ energia.titulo }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{ energia.subtitulo }}</h6>
+      <p class="card-text">{{ energia.descripcion }}</p>
+      <ul>
+        <li><strong>Coste de uso:</strong> {{ energia.costoDeUso }}</li>
+        <li><strong>Coste de instalación:</strong> {{ energia.costoDeInstalacion }}</li>
+        <li><strong>Años de duración:</strong> {{ energia.duracion }}</li>
+        <li><strong>Emisiones de CO2:</strong> {{ energia.emisionesCo2 }}</li>
+        <li><strong>Continente con mayor producción:</strong> {{ energia.continenteMaxProduccion }}</li>
+        <li><strong>Continente con menor producción:</strong> {{ energia.continenteMinProduccion }}</li>
+      </ul>
     </div>
   </div>
-  
+</div>
+
