@@ -1,39 +1,75 @@
 /*Globales*/
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 *{
     box-sizing: border-box;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
-}
-
 a{
     text-decoration: none;
-    color: black;
+    color: white;
     font-weight: bold;
 }
 
 /*Navegador*/
-.navbar{
-    background-color: #EBD5D5;
+/* Ajustar el navbar */
+/* Estilo general del navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+.mat-toolbar{
+background-color: #007FFF !important; 
+color: white !important;
+}
+/* Espaciador para mover los botones a la derecha */
+.spacer {
+  flex: 1;
 }
 
-.navbar-brand img {
-    border-radius: 50%; 
-    object-fit: cover; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .nav-link{
-    font-weight: 400;
-    transition: all 0.3 ease;
-  }
+/* Estilos de los botones */
+.nav-links button {
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
 
-  .nav-link:hover {
-    color: #007bff !important;
-    font-weight: 450;
+/* Animación al pasar el ratón */
+.nav-links button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+
+/* Ocultar menú hamburguesa en pantallas grandes */
+.menu-button {
+  display: none;
+}
+
+/* Estilos para menú desplegable en móviles */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 10px;
+  position: absolute;
+  top: 56px;
+  right: 0;
+  width: 200px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive: Mostrar menú hamburguesa en móviles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
   }
-  
+  .menu-button {
+    display: inline-block;
+  }
+}

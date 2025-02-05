@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { NavegatorComponent } from './nav.app.component';
+import { CardComponent } from './card.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  imports: [NavegatorComponent, CardComponent],
+  template: `
+    <app-nav></app-nav> 
+    <main>
+      <app-card></app-card>
+    </main>
+  `
 })
-export class AppComponent {
-  title = 'P10_2425';
-}
+export class AppComponent {}

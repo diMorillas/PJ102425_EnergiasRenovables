@@ -6,7 +6,19 @@ import { FooterComponent } from './app/footer.app.component';
 import { AboutUsComponent } from './app/aboutus.app.component';
 import { AppComponent } from './app/app.component';
 import { CardComponent } from './app/card.component';
+import { importProvidersFrom } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 
-bootstrapApplication(CardComponent, appConfig)
-  .catch((err) => console.error('Error al inicializar la aplicación:', err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    importProvidersFrom(
+      BrowserAnimationsModule,
+      MatButtonModule,
+      MatToolbarModule
+    ), provideAnimationsAsync(), provideAnimationsAsync(), provideAnimationsAsync()
+  ],
+}).catch((err) => console.error(err));
