@@ -6,9 +6,9 @@
 
   <!-- Botones de navegación para pantallas grandes -->
   <div class="nav-links">
-    <button mat-button [routerLink]="'/tipos-energia'">Tipos de Energía</button>
+    <button mat-button [routerLink]="'/'">Tipos de Energía</button>
     <button mat-button [routerLink]="'/about-us'">Sobre Nosotros</button>
-    <button mat-button [routerLink]="'/contacto'">Contacto</button>
+    <button mat-button [routerLink]="'/form'">Contacto</button>
   </div>
 
   <!-- Menú hamburguesa en pantallas pequeñas -->
@@ -19,7 +19,7 @@
 
 <!-- Menú desplegable en móviles -->
 <div class="mobile-menu" *ngIf="menuOpen">
-  <button mat-button [routerLink]="'/tipos-energia'">Tipos de Energía</button>
+  <button mat-button [routerLink]="'/'">Tipos de Energía</button>
   <button mat-button [routerLink]="'/about-us'">Sobre Nosotros</button>
-  <button mat-button [routerLink]="'/contacto'">Contacto</button>
+  <button mat-button [routerLink]="'/'">Contacto</button>
 </div>
