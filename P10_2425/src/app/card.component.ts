@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { OrdenarCostePipe } from './pipe/ordenarCoste.pipe';
+import { CalcularGastoPipe } from './pipe/calcularGasto.pipe';
 
 export interface Energy {
   title: string;
@@ -19,7 +20,7 @@ export interface Energy {
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [CommonModule, FormsModule, OrdenarCostePipe],
+  imports: [CommonModule, FormsModule, OrdenarCostePipe, CalcularGastoPipe],
   templateUrl: 'card.component.html',
   styleUrls: ['card.component.css']
 })

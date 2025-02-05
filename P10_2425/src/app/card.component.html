@@ -19,6 +19,8 @@
         <p class="card-text">{{ energy.description }}</p>
         <ul>
           <li><strong>Coste de uso:</strong> {{ energy.costOfUse }}</li>
+          <li><strong>Coste aproximado en 12 horas/día y entre {{ energy.duration }}:</strong> 
+            {{ energy | calcularGasto }}</li>
           <li><strong>Coste de instalación:</strong> {{ energy.installationCost }}</li>
           <li><strong>Años de duración:</strong> {{ energy.duration }}</li>
           <li><strong>Emisiones de CO2:</strong> {{ energy.co2Emissions }}</li>
