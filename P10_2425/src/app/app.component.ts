@@ -1,8 +1,13 @@
+/* No tocar */
 import { Component } from '@angular/core';
 import { FooterComponent } from './footer.app.component';  
 import { NavegatorComponent } from './nav.app.component';  
 import { RouterModule } from '@angular/router';
+/* No tocar */
+
+/*Cambiar para ir probando, tambien añadair en imports*/
 import { CardComponent } from "./card.component";  
+
 
 @Component({
   selector: 'app-root',
