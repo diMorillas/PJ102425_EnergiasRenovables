@@ -2,9 +2,13 @@
 <!-- Formulario de Filtro -->
 <div class="filter-container">
   <label for="filterKey">Filtrar por:</label>
-  <select id="filterKey" [(ngModel)]="selectedFilter">
-    <option *ngFor="let key of filterKeys" [value]="key">{{ key }}</option>
-  </select>
+  <mat-form-field>
+  <mat-select [(value)]="selectedFilter" class="custom-select">
+    <mat-option *ngFor="let key of filterKeys" [value]="key">
+      {{ key }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
 
   <input type="text" [(ngModel)]="filterValue" placeholder="Ingrese el valor..." />
 </div>

@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { OrdenarCostePipe } from './pipe/ordenarCoste.pipe';
+import { MatInputModule } from '@angular/material/input';
+
 
 export interface Energia {
   titulo: string;
@@ -22,7 +24,7 @@ export interface Energia {
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [CommonModule, FormsModule, OrdenarCostePipe, MatFormFieldModule, MatSelectModule],
+  imports: [CommonModule, FormsModule, OrdenarCostePipe, MatFormFieldModule, MatSelectModule,MatFormFieldModule],
   templateUrl: 'card.component.html',
   styleUrls: ['card.component.css']
 })
