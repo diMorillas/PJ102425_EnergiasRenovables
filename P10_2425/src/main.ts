@@ -5,7 +5,8 @@ import { FormComponent } from './app/form.app.component';
 import { FooterComponent } from './app/footer.app.component';
 import { AboutUsComponent } from './app/aboutus.app.component';
 import { AppComponent } from './app/app.component';
+import { CardComponent } from './app/card.component';
 
 
-bootstrapApplication(AppComponent, appConfig)
+bootstrapApplication(CardComponent, appConfig)
   .catch((err) => console.error('Error al inicializar la aplicación:', err));
