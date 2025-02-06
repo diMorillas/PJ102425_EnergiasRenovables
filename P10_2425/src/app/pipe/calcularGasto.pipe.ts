@@ -8,10 +8,8 @@ import { Energy } from '../card.component';
 export class CalcularGastoPipe implements PipeTransform {
 
   transform(energy: Energy): string {
-    // Extraemos el coste de uso por kWh (en €/kWh), y lo convertimos a número
-    const costePorKWh = parseFloat(energy.costOfUse.split(' €/kWh')[0]);
+    const costePorKWh = parseFloat(energy.costOfUse.split(' €/kWh')[0]); //aqui se cambia el valor string a numerico
 
-    // Extraemos los años de duración (en el formato "X - Y años"), y tomamos el valor promedio
     const [minYears, maxYears] = energy.duration.split(' - ').map(y => parseInt(y, 10));
     const promedioAnios = (minYears + maxYears) / 2;
 
