@@ -14,5 +14,6 @@ export class Energia {
   }
   
   export class Renovable extends Energia {}
+  
   export class NoRenovable extends Energia {}
   
