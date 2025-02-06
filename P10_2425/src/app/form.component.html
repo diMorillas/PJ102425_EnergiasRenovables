@@ -1,22 +1,28 @@
-<body style="margin: 0; padding: 0; font-family: 'Montserrat', sans-serif; background-image: url('./assets/images/bannerFormulario.webp'); background-size: cover; background-repeat: no-repeat; background-position: center; height: 100vh; display: flex; justify-content: center; align-items: center;">
+<body>
+  <div class="container">
+    <h1 class="form-title">Formulario de Contacto</h1> <!-- Ahora está fuera del mat-card -->
+    
+    <mat-card class="form-card">
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Nombre</mat-label>
+          <input matInput formControlName="name" placeholder="Introduce tu nombre">
+        </mat-form-field>
 
-  <div class="container mt-5">
-    <h1 class="text-center mb-4">Formulario de Contacto</h1>
-    <form>
-      <div class="mb-3">
-        <label for="name" class="form-label">Nombre:</label>
-        <input type="text" class="form-control" id="name" placeholder="Introduce tu nombre">
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Asunto:</label>
-        <input type="email" class="form-control" id="email" placeholder="Escribe el asunto">
-      </div>
-      <div class="mb-3">
-        <label for="message" class="form-label">Mensaje:</label>
-        <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
-      </div>
-      
-      <button type="submit" class="btn btn-primary w-100">Enviar</button>
-    </form>
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Asunto</mat-label>
+          <input matInput formControlName="subject" placeholder="Escribe el asunto">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Mensaje</mat-label>
+          <textarea matInput formControlName="message" rows="4" placeholder="Escribe tu mensaje aquí"></textarea>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" type="submit" class="full-width" [disabled]="contactForm.invalid">
+          Enviar
+        </button>
+      </form>
+    </mat-card>
   </div>
 </body>

@@ -1,31 +1,43 @@
-/* Reseteo y estilos generales */
-* {
-    box-sizing: border-box;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url('/assets/images/bannerFormulario.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Alinea elementos en columna */
+}
 
-  /* Estilo del formulario */
-  h1 {
-    color: #ffffff;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-  }
-  
-  form {
-    background-color: rgba(255, 255, 255, 0.9);
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-    width: 500px;
-    opacity: 0.90;
-    margin: 0 auto;
-    margin-bottom: 400px;
-  }
-  
-  button {
-    background-color: #007bff;
-    border: none;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-title {
+  font-size: 36px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); 
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: white; 
+}
+
+.form-card {
+  width: 400px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.full-width {
+  width: 100%;
+}
