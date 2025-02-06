@@ -12,15 +12,15 @@
   </div>
   <mat-form-field class="example-full-width">
     <mat-label>Valor:</mat-label>
-    <input matInput placeholder="Ingrese el valor..." [(ngModel)]="filterValue">
+    <input matInput placeholder="Ingrese el valor..." [(ngModel)]="filterTitle">
   </mat-form-field>
 </div>
 
 <!-- Sección de Energías -->
 <h2>Energías Disponibles</h2>
 <div class="card-container">
-  <mat-card class="card" *ngFor="let energia of filteredEnergies() | ordenarCoste:'asc'">
-    <img mat-card-image [src]="energia.imagen" [alt]="energia.titulo" class="card-img-top">
+  <mat-card class="card" *ngFor="let energia of filteredEnergies">
+    <img mat-card-image [src]="energia.img" [alt]="energia.titulo" class="card-img-top">
     <mat-card-content>
       <h5 mat-card-title>{{ energia.titulo }}</h5>
       <h6 mat-card-subtitle>{{ energia.subtitulo }}</h6>
