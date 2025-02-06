@@ -1,30 +1,29 @@
-
 <!-- Formulario de Filtro -->
 <div class="filter-container">
   <div class="select">
-  <mat-form-field>
-  <mat-label>Filtro:</mat-label>
-  <mat-select [(value)]="selectedFilter" class="custom-select">
-    <mat-option *ngFor="let key of filterKeys" [value]="key">
-      {{ key.toUpperCase() }}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
-</div>
-<mat-form-field class="example-full-width">
-  <mat-label>Valor:</mat-label>
-  <input matInput placeholder="Ingrese el valor..." [(ngModel)]="filterValue">
-</mat-form-field>
+    <mat-form-field>
+      <mat-label>Filtro:</mat-label>
+      <mat-select [(value)]="selectedFilter" class="custom-select">
+        <mat-option *ngFor="let key of filterKeys" [value]="key">
+          {{ key.toUpperCase() }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <mat-form-field class="example-full-width">
+    <mat-label>Valor:</mat-label>
+    <input matInput placeholder="Ingrese el valor..." [(ngModel)]="filterValue">
+  </mat-form-field>
 </div>
 
 <!-- Sección de Energías -->
 <h2>Energías Disponibles</h2>
 <div class="card-container">
-  <div class="card" *ngFor="let energia of filteredEnergies() | ordenarCoste:'asc'">
-    <img [src]="energia.imagen" [alt]="energia.titulo" class="card-img-top">
-    <div class="card-body">
-      <h5 class="card-title">{{ energia.titulo }}</h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{ energia.subtitulo }}</h6>
+  <mat-card class="card" *ngFor="let energia of filteredEnergies() | ordenarCoste:'asc'">
+    <img mat-card-image [src]="energia.imagen" [alt]="energia.titulo" class="card-img-top">
+    <mat-card-content>
+      <h5 mat-card-title>{{ energia.titulo }}</h5>
+      <h6 mat-card-subtitle>{{ energia.subtitulo }}</h6>
       <p class="card-text">{{ energia.descripcion }}</p>
       <ul>
         <li><strong>Coste de uso:</strong> {{ energia.costoDeUso }}</li>
@@ -34,7 +33,6 @@
         <li><strong>Continente con mayor producción:</strong> {{ energia.continenteMaxProduccion }}</li>
         <li><strong>Continente con menor producción:</strong> {{ energia.continenteMinProduccion }}</li>
       </ul>
-    </div>
-  </div>
+    </mat-card-content>
+  </mat-card>
 </div>
-
