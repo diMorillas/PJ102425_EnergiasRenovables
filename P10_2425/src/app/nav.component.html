@@ -1,4 +1,6 @@
 <mat-toolbar>
+  <!--<img src="/assets/images/logo.svg" alt="EcoLost Logo" class="logo-img"> -->
+
   <span class="logo">EcoLost</span>
 
   <!-- Espaciador para alinear los botones a la derecha -->
@@ -13,7 +15,7 @@
 
   <!-- Menú hamburguesa en pantallas pequeñas -->
   <button mat-icon-button class="menu-button" (click)="toggleMenu()">
-    <mat-icon></mat-icon>
+    <mat-icon>menu</mat-icon>
   </button>
 </mat-toolbar>
 
@@ -21,5 +23,5 @@
 <div class="mobile-menu" *ngIf="menuOpen">
   <button mat-button [routerLink]="'/'">Tipos de Energía</button>
   <button mat-button [routerLink]="'/about-us'">Sobre Nosotros</button>
-  <button mat-button [routerLink]="'/'">Contacto</button>
+  <button mat-button [routerLink]="'/form'">Contacto</button>
 </div>
