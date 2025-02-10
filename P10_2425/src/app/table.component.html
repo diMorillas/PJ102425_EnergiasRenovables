@@ -1,0 +1,78 @@
+<h2>Energías Disponibles</h2>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!-- Columna: Título -->
+  <ng-container matColumnDef="titulo">
+    <th mat-header-cell *matHeaderCellDef> Título </th>
+    <td mat-cell *matCellDef="let element"> {{ element.titulo }} </td>
+  </ng-container>
+
+  <!-- Columna: Subtítulo -->
+  <ng-container matColumnDef="subtitulo">
+    <th mat-header-cell *matHeaderCellDef> Subtítulo </th>
+    <td mat-cell *matCellDef="let element"> {{ element.subtitulo }} </td>
+  </ng-container>
+
+  <!-- Columna: Descripción -->
+  <ng-container matColumnDef="descripcion">
+    <th mat-header-cell *matHeaderCellDef> Descripción </th>
+    <td mat-cell *matCellDef="let element"> {{ element.descripcion }} </td>
+  </ng-container>
+
+  <!-- Columna: Costo de Uso -->
+  <ng-container matColumnDef="costoDeUso">
+    <th mat-header-cell *matHeaderCellDef> Costo de Uso </th>
+    <td mat-cell *matCellDef="let element"> {{ element.costoDeUso }} </td>
+  </ng-container>
+
+  <!-- Columna: Costo de Instalación -->
+  <ng-container matColumnDef="costoDeInstalacion">
+    <th mat-header-cell *matHeaderCellDef> Costo Instalación </th>
+    <td mat-cell *matCellDef="let element"> {{ element.costoDeInstalacion }} </td>
+  </ng-container>
+
+  <!-- Columna: Duración -->
+  <ng-container matColumnDef="duracion">
+    <th mat-header-cell *matHeaderCellDef> Duración </th>
+    <td mat-cell *matCellDef="let element"> {{ element.duracion }} </td>
+  </ng-container>
+
+  <!-- Columna: Emisiones CO2 -->
+  <ng-container matColumnDef="emisionesCo2">
+    <th mat-header-cell *matHeaderCellDef> Emisiones CO2 </th>
+    <td mat-cell *matCellDef="let element"> {{ element.emisionesCo2 }} </td>
+  </ng-container>
+
+  <!-- Columna: Continente con Mayor Producción -->
+  <ng-container matColumnDef="continenteMaxProduccion">
+    <th mat-header-cell *matHeaderCellDef> Continente Mayor </th>
+    <td mat-cell *matCellDef="let element"> {{ element.continenteMaxProduccion }} </td>
+  </ng-container>
+
+  <!-- Columna: Continente con Menor Producción -->
+  <ng-container matColumnDef="continenteMinProduccion">
+    <th mat-header-cell *matHeaderCellDef> Continente Menor </th>
+    <td mat-cell *matCellDef="let element"> {{ element.continenteMinProduccion }} </td>
+  </ng-container>
+
+  <!-- Columna: País con Mayor Producción -->
+  <ng-container matColumnDef="paisMaxProduccion">
+    <th mat-header-cell *matHeaderCellDef> País Mayor </th>
+    <td mat-cell *matCellDef="let element"> {{ element.paisMaxProduccion }} </td>
+  </ng-container>
+
+  <!-- Columna: País con Menor Producción -->
+  <ng-container matColumnDef="paisMinProduccion">
+    <th mat-header-cell *matHeaderCellDef> País Menor </th>
+    <td mat-cell *matCellDef="let element"> {{ element.paisMinProduccion }} </td>
+  </ng-container>
+
+  <!-- Fila de Cabecera -->
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <!-- Filas de Datos -->
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
+<!-- Paginador -->
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
