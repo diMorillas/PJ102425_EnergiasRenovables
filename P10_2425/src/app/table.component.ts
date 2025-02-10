@@ -2,7 +2,7 @@ import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Energia } from './models/energia.model';
-import { energies } from './data/energia.data';
+import { energies } from './data/energias.data';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
@@ -29,7 +29,7 @@ import { MatTableDataSource } from '@angular/material/table';
 })
 export class TableComponent implements AfterViewInit {
   energies: Energia[] = energies;
-  displayedColumns: string[] = ['titulo', 'subtitulo', 'descripcion']; // Define las columnas que necesites
+  displayedColumns: string[] = ['titulo', 'subtitulo', 'descripcion','costoDeUso', 'emisionesCo2']; // Define las columnas que necesites
 
   // Utiliza MatTableDataSource para manejar los datos de la tabla
   dataSource = new MatTableDataSource<Energia>(this.energies);
