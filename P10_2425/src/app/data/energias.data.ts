@@ -42,7 +42,7 @@ export const energies: Energia[] = [
     'Asia',
     'Brasil',
     'Canadá',
-    'hidroelectrica.jpg'
+    'hidraulica.jpg'
   ),
   new Renovable(
     'Energía Geotérmica',
