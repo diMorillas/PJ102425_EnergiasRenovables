@@ -19,7 +19,7 @@
 <!-- Sección de Energías -->
 <h2>Energías Disponibles</h2>
 <div class="card-container">
-  <mat-card class="card" *ngFor="let energia of filteredEnergies">
+  <mat-card class="card" *ngFor="let energia of filteredEnergies | ordenarCoste">
     <img mat-card-image [src]="energia.img" [alt]="energia.titulo" class="card-img-top">
     <mat-card-content>
       <h5 mat-card-title>{{ energia.titulo }}</h5>
@@ -27,11 +27,17 @@
       <p class="card-text">{{ energia.descripcion }}</p>
       <ul>
         <li><strong>Coste de uso:</strong> {{ energia.costoDeUso }}</li>
+        <li><strong>Coste aproximado en 12 horas/día y entre {{ energia.duracion }}:</strong>
+            {{ energia | calcularGasto }}</li>
+        <li><strong>Total de emisiones de Co2 anuales:</strong>
+            {{ energia | calcularAhorroCo2:' ' }}</li>
         <li><strong>Coste de instalación:</strong> {{ energia.costoDeInstalacion }}</li>
         <li><strong>Años de duración:</strong> {{ energia.duracion }}</li>
         <li><strong>Emisiones de CO2:</strong> {{ energia.emisionesCo2 }}</li>
         <li><strong>Continente con mayor producción:</strong> {{ energia.continenteMaxProduccion }}</li>
         <li><strong>Continente con menor producción:</strong> {{ energia.continenteMinProduccion }}</li>
+        <li><strong>País mayor producción:</strong> {{ energia.paisMaxProduccion }}</li>
+        <li><strong>País menor producción:</strong> {{ energia.paisMinProduccion }}</li>
       </ul>
     </mat-card-content>
   </mat-card>

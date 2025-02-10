@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Energia } from '../card.component';  // Asegúrate de usar la ruta correcta
+import { Energia } from '../models/energia.model';
 
 @Pipe({
   name: 'ordenarCoste',

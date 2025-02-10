@@ -9,6 +9,8 @@ export class Energia {
       public emisionesCo2: string,
       public continenteMaxProduccion: string,
       public continenteMinProduccion: string,
+      public paisMaxProduccion: string,
+      public paisMinProduccion: string,
       public img: string
     ) {}
   }

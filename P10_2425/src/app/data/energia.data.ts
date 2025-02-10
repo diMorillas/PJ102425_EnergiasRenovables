@@ -12,6 +12,8 @@ export const energies: Energia[] = [
     '0 g/kWh',
     'Asia',
     'Europa',
+    'China',
+    'Nigeria',
     'solar.jpg'
   ),
   new Renovable(
@@ -24,6 +26,8 @@ export const energies: Energia[] = [
     '0 g/kWh',
     'Europa',
     'África',
+    'China',
+    'Nigeria',
     'eolica.jpg'
   ),
   // Energías No Renovables
@@ -37,10 +41,12 @@ export const energies: Energia[] = [
     '700 - 800 g/kWh',
     'Asia',
     'Europa',
+    'EEUU',
+    'Japón',
     'petroleo.jpg'
   ),
   new NoRenovable(
-    'Carbón',
+    'Gas',
     'Energía fósil',
     'El carbón es un recurso no renovable utilizado ampliamente para generar electricidad.',
     '0.09 €/kWh',
@@ -49,6 +55,8 @@ export const energies: Energia[] = [
     '800 - 1,100 g/kWh',
     'Asia',
     'Oceanía',
-    'carbon.jpg'
+    'EEUU',
+    'Japón',
+    'gas.webp'
   )
 ];
