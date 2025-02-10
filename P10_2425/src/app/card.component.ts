@@ -10,7 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCardModule } from '@angular/material/card';
 import { OrdenarCostePipe } from './pipe/ordenarCoste.pipe';
 import { CalcularGastoPipe } from './pipe/calcularGasto.pipe';
-import { CalcularAhorroCo2Pipe } from './pipe/calcularAhorro.pipe';
+import { emisionesCo2Pipe } from './pipe/calcularAhorro.pipe';
 
 @Component({
   selector: 'app-card',
@@ -22,7 +22,7 @@ import { CalcularAhorroCo2Pipe } from './pipe/calcularAhorro.pipe';
     MatInputModule,
     MatSelectModule,
     OrdenarCostePipe,
-    CalcularAhorroCo2Pipe,
+    emisionesCo2Pipe,
     CalcularGastoPipe],
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']

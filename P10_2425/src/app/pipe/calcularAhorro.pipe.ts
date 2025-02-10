@@ -2,10 +2,10 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Energia } from '../models/energia.model';
 
 @Pipe({
-  name: 'calcularAhorroCo2',
+  name: 'emisionesCo2',
   standalone: true
 })
-export class CalcularAhorroCo2Pipe implements PipeTransform {
+export class emisionesCo2Pipe implements PipeTransform {
   transform(energia: Energia, tipo: string): string {
     if (!energia || !energia.emisionesCo2  || energia.emisionesCo2.trim() === '') {
       return '0 g/kWh';

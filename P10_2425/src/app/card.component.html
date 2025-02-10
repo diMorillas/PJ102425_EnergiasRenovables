@@ -30,7 +30,7 @@
         <li><strong>Coste aproximado en 12 horas/día y entre {{ energia.duracion }}:</strong>
             {{ energia | calcularGasto }}</li>
         <li><strong>Total de emisiones de Co2 anuales:</strong>
-            {{ energia | calcularAhorroCo2:' ' }}</li>
+            {{ energia | emisionesCo2:' ' }}</li>
         <li><strong>Coste de instalación:</strong> {{ energia.costoDeInstalacion }}</li>
         <li><strong>Años de duración:</strong> {{ energia.duracion }}</li>
         <li><strong>Emisiones de CO2:</strong> {{ energia.emisionesCo2 }}</li>
