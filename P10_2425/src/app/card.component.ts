@@ -28,9 +28,13 @@ import { CalcularAhorroCo2Pipe } from './pipe/calcularAhorro.pipe';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent {
-  // Array completo de energías importado
+  // Array de datos importado
   energies: Energia[] = energies;
-  filterKeys: string[] = [
+
+  // Definición de filtros
+  filterTitle: string = '';
+  selectedFilter: keyof Energia = 'titulo';  // Por defecto, filtrar por 'titulo'
+  filterKeys: (keyof Energia)[] = [
     'titulo',
     'subtitulo',
     'descripcion',
@@ -38,23 +42,20 @@ export class CardComponent {
     'costoDeInstalacion',
     'duracion',
     'emisionesCo2',
-    'continenteMaxProduction',
-    'continenteMinProduction',
-    'paisMaxProduction',
-    'paisMinProduction' 
+    'continenteMaxProduccion',
+    'continenteMinProduccion',
+    'paisMaxProduccion',
+    'paisMinProduccion'
   ];
 
-  // Propiedades para el filtrado, por ejemplo, filtrar por título
-  filterTitle: string = '';
-  selectedFilter: keyof Energia = 'titulo';
-
-  // Método getter que filtra las energías en función del filtro
+  // Getter para filtrar el array de energías, se usa sin el ()
   get filteredEnergies(): Energia[] {
     if (!this.filterTitle.trim()) {
       return this.energies;
     }
-    return this.energies.filter(energy =>
-      energy.titulo.toLowerCase().includes(this.filterTitle.toLowerCase())
-    );
+    return this.energies.filter(energy => {
+      const value = energy[this.selectedFilter] as string;
+      return value && value.toLowerCase().includes(this.filterTitle.toLowerCase());
+    });
   }
 }
