@@ -62,6 +62,10 @@ color: white !important;
   right: 0;
   width: 200px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+.mat-icon{
+  color:white;
 }
 
 /* Responsive: Mostrar menú hamburguesa en móviles */

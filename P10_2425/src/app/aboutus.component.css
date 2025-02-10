@@ -36,8 +36,16 @@ a{
     color: #007bff !important;
     font-weight: 450;
   }
-  /*Botón*/
-  button{
-  right:330px;
-  bottom:100px;
-}
+  button {
+    right: 330px;
+    bottom: 100px;
+  }
+  
+  /* Ajuste para pantallas pequeñas (móviles) */
+  @media (max-width: 768px) {
+    button {
+      right: 10px; /* Más cerca del borde */
+      bottom: 20px; /* Más visible en móvil */
+      font-size: 14px; /* Tamaño más pequeño */
+    }
+  }
