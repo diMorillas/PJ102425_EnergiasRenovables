@@ -32,7 +32,7 @@ export class TableComponent implements AfterViewInit {
   energies: Energia[] = energies;
   displayedColumns: string[] = ['titulo', 'subtitulo', 'descripcion', 'costoDeUso', 'emisionesCo2'];
   
-  // Fuente de datos para la tabla
+  
   dataSource = new MatTableDataSource<Energia>(this.energies);
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
