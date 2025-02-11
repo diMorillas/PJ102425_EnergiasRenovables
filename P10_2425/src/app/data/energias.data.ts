@@ -1,0 +1,132 @@
+import { Renovable, NoRenovable, Energia } from '../models/energia.model';
+
+export const energies: Energia[] = [
+  // Energías Renovables
+  new Renovable(
+    'Energía Solar',
+    'Aprovecha la energía del sol',
+    'La energía solar es una de las fuentes renovables más limpias y abundantes.',
+    '0.05 €/kWh',
+    '1,200 € - 3,000 €',
+    '25 - 30 años',
+    '0 g/kWh',
+    'Asia',
+    'Europa',
+    'China',
+    'Nigeria',
+    'solar.jpg'
+  ),
+  new Renovable(
+    'Energía Eólica',
+    'Aprovecha el viento para generar electricidad',
+    'La energía eólica es una fuente renovable que aprovecha el viento.',
+    '0.03 €/kWh',
+    '1,500 € - 4,000 €',
+    '20 - 25 años',
+    '0 g/kWh',
+    'Europa',
+    'África',
+    'China',
+    'Nigeria',
+    'eolica.jpg'
+  ),
+  new Renovable(
+    'Energía Hidroeléctrica',
+    'Utiliza el agua en movimiento para generar electricidad',
+    'La energía hidroeléctrica se obtiene del movimiento del agua en ríos y presas.',
+    '0.04 €/kWh',
+    '1,000 € - 2,500 €',
+    '30 - 50 años',
+    '0 g/kWh',
+    'América',
+    'Asia',
+    'Brasil',
+    'Canadá',
+    'hidraulica.jpg'
+  ),
+  new Renovable(
+    'Energía Geotérmica',
+    'Aprovecha el calor interno de la Tierra',
+    'La energía geotérmica utiliza el calor almacenado en el interior de la Tierra para generar electricidad.',
+    '0.06 €/kWh',
+    '2,000 € - 5,000 €',
+    '25 - 40 años',
+    '0 g/kWh',
+    'Islandia',
+    'Nueva Zelanda',
+    'Estados Unidos',
+    'México',
+    'geotermica.jpg'
+  ),
+  new Renovable(
+    'Biomasa',
+    'Utiliza materiales orgánicos para producir energía',
+    'La biomasa utiliza residuos orgánicos para producir calor y electricidad.',
+    '0.05 €/kWh',
+    '1,000 € - 3,500 €',
+    '20 - 30 años',
+    '30 - 40 g/kWh',
+    'América',
+    'Europa',
+    'Brasil',
+    'Estados Unidos',
+    'biomasa.jpg'
+  ),
+  // Energías No Renovables
+  new NoRenovable(
+    'Petróleo',
+    'Fuente no renovable',
+    'El petróleo es un recurso no renovable utilizado para generar energía.',
+    '0.10 €/kWh',
+    '5,000 € - 10,000 €',
+    '15 - 20 años',
+    '700 - 800 g/kWh',
+    'Asia',
+    'Europa',
+    'EEUU',
+    'Japón',
+    'petroleo.jpg'
+  ),
+  new NoRenovable(
+    'Gas',
+    'Energía fósil',
+    'El gas es un recurso no renovable utilizado ampliamente para generar electricidad.',
+    '0.09 €/kWh',
+    '4,000 € - 12,000 €',
+    '25 - 40 años',
+    '800 - 1,100 g/kWh',
+    'Asia',
+    'Oceanía',
+    'EEUU',
+    'Japón',
+    'gas.webp'
+  ),
+  new NoRenovable(
+    'Carbón',
+    'Energía fósil',
+    'El carbón es un recurso no renovable utilizado ampliamente para generar electricidad.',
+    '0.08 €/kWh',
+    '3,000 € - 8,000 €',
+    '30 - 50 años',
+    '900 - 1,200 g/kWh',
+    'Asia',
+    'Europa',
+    'EEUU',
+    'China',
+    'carbon.jpg'
+  ),
+  new NoRenovable(
+    'Nuclear',
+    'Energía basada en la fisión nuclear',
+    'La energía nuclear utiliza la fisión de átomos para generar electricidad.',
+    '0.12 €/kWh',
+    '6,000 € - 15,000 €',
+    '40 - 60 años',
+    '0 g/kWh',
+    'Europa',
+    'Asia',
+    'Francia',
+    'Rusia',
+    'nuclear.jpg'
+  )
+];

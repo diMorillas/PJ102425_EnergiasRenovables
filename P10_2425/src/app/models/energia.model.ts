@@ -1,14 +1,16 @@
 export class Energia {
     constructor(
-      public title: string,
-      public subtitle: string,
-      public description: string,
-      public costOfUse: string,
-      public installationCost: string,
-      public duration: string,
-      public co2Emissions: string,
-      public continentMaxProduction: string,
-      public continentMinProduction: string,
+      public titulo: string,
+      public subtitulo: string,
+      public descripcion: string,
+      public costoDeUso: string,
+      public costoDeInstalacion: string,
+      public duracion: string,
+      public emisionesCo2: string,
+      public continenteMaxProduccion: string,
+      public continenteMinProduccion: string,
+      public paisMaxProduccion: string,
+      public paisMinProduccion: string,
       public img: string
     ) {}
   }

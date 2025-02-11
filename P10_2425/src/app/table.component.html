@@ -1,0 +1,46 @@
+
+
+<div style="max-width: 1600px; margin-left: 50px; margin-top: 15px;">
+<h2 style="text-align: center;">Energías Disponibles</h2>
+
+<div class="filter-container">
+  <button mat-button (click)="filtrarPorTipo('renovable')" color="primary">Mostrar Renovables</button>
+  <button mat-button (click)="filtrarPorTipo('noRenovable')" color="accent">Mostrar No Renovables</button>
+  <button mat-button (click)="filtrarPorTipo('todos')" color="warn">Mostrar Todos</button>
+</div>
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+  <ng-container matColumnDef="titulo">
+    <th mat-header-cell *matHeaderCellDef> Título </th>
+    <td mat-cell *matCellDef="let energia"> {{ energia.titulo }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="subtitulo">
+    <th mat-header-cell *matHeaderCellDef> Subtítulo </th>
+    <td mat-cell *matCellDef="let energia"> {{ energia.subtitulo }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="descripcion">
+    <th mat-header-cell *matHeaderCellDef> Descripción </th>
+    <td mat-cell *matCellDef="let energia"> {{ energia.descripcion }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="costoDeUso">
+    <th mat-header-cell *matHeaderCellDef> Costo de Uso </th>
+    <td mat-cell *matCellDef="let energia"> {{ energia.costoDeUso }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="emisionesCo2">
+    <th mat-header-cell *matHeaderCellDef> Emisiones CO2 </th>
+    <td mat-cell *matCellDef="let energia"> {{ energia.emisionesCo2 }} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>
+
+<mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+</div>
