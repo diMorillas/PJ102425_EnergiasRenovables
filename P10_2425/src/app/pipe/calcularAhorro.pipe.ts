@@ -20,7 +20,7 @@ export class emisionesCo2Pipe implements PipeTransform {
 
     const co2Promedio = valoresNum.reduce((a, b) => a + b, 0) / valoresNum.length;
 
-    const co2Anual = co2Promedio * 15 * 365;
+    const co2Anual = co2Promedio * 12 * 365;
 
     if (tipo === 'renovable') {
       return `${co2Anual.toFixed(0)} g/kWh (sin emisiones)`;

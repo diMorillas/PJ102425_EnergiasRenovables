@@ -8,7 +8,6 @@ export const routes: Routes = [
   { path: '', component: CardComponent  },  // Página principal
   { path: 'about-us', component: AboutUsComponent },
   { path: 'form', component: FormComponent },
-  {path: 'card', component: AboutUsComponent},
   {path:'table',component: TableComponent},
   { path: '**', redirectTo: '', pathMatch: 'full' } // Ruta 404
 ];
