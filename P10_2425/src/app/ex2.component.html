@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Añadir personas</h1>
+  <input type="text" [(ngModel)]="nom" placeholder="Añadir nombre"/>
+  <input type="text" [(ngModel)]="cognom1" placeholder="Añadir primer apellido"/>
+  <input type="text" [(ngModel)]="cognom2" placeholder="Añadir segundo apellido"/>
+  <button (click)="afegirPersona()">Añadir persona al listado</button>
+
+  <h2>Listado de personas</h2>
+  <ul>
+    <li *ngFor="let persona of persones; let i = index">
+      {{ persona.nom }} {{ persona.cognom1 | mayus }} | {{ persona.cognom2}}
+      <button (click)="eliminarPersona(i)">Eliminar</button>
+    </li>
+  </ul>
+</div>

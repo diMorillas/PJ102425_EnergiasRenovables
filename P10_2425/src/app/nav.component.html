@@ -7,22 +7,12 @@
 
   <!-- Botones de navegación para pantallas grandes -->
   <div class="nav-links">
-    <button mat-button [routerLink]="'/'">Tipos de Energía</button>
-    <button mat-button [routerLink]="'/table'">Tabla de energías</button>
-    <button mat-button [routerLink]="'/about-us'">Sobre Nosotros</button>
-    <button mat-button [routerLink]="'/form'">Contacto</button>
+    <button mat-button [routerLink]="'/'">añadir equipos</button>
+    <button mat-button [routerLink]="'/emparejamiento'">Emparejamiento</button>
+    <button mat-button [routerLink]="'/resultado'">Sobre Nosotros</button>
+    <button mat-button [routerLink]="'/ejercicio2'">ejercicio2</button>
+
+
   </div>
 
-  <!-- Menú hamburguesa en pantallas pequeñas -->
-  <button mat-icon-button class="menu-button" (click)="toggleMenu()">
-    <mat-icon>menu</mat-icon>
-  </button>
-</mat-toolbar>
 
-<!-- Menú desplegable en móviles -->
-<div class="mobile-menu" *ngIf="menuOpen">
-  <button mat-button [routerLink]="'/'">Tipos de Energía</button>
-  <button mat-button [routerLink]="'/table'">Tabla de energías</button>
-  <button mat-button [routerLink]="'/about-us'">Sobre Nosotros</button>
-  <button mat-button [routerLink]="'/form'">Contacto</button>
-</div>

@@ -1,0 +1,15 @@
+<div>
+  <label for="equipo1">Equipo 1:</label>
+  <select id="equipo1" [(ngModel)]="equipo1">
+    <option *ngFor="let equipo of equipos1" [value]="equipo">{{ equipo }}</option>
+  </select>
+</div>
+
+<div>
+  <label for="equipo2">Equipo 2:</label>
+  <select id="equipo2" [(ngModel)]="equipo2">
+    <option *ngFor="let equipo of equipos2" [value]="equipo">{{ equipo }}</option>
+  </select>
+</div>
+
+<button (click)="agregarEquipos()">Agregar Equipos</button>
