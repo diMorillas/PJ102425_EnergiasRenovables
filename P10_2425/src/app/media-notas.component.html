@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>Calcular la Media de las Notas</h1>
+    <div class="notas">
+      <p><strong>Notas:</strong> {{ notas }}</p>
+      <p><strong>Media de las notas:</strong> {{ notas | mediaNotas }}</p>
+    </div>
+    <input type="number" [(ngModel)]="nuevaNota" placeholder="Añadir nueva nota"  min="0" max="10"/>
+    <button (click)="agregarNota()">Añadir Nota</button>
+  </div>

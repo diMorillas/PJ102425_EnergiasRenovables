@@ -1,0 +1,31 @@
+[
+    {
+      "titulo": "Energía Solar",
+      "subtitulo": "Energía renovable del sol",
+      "descripcion": "Convierte la luz solar en electricidad.",
+      "costoDeUso": "0.05 €/kWh",
+      "costoDeInstalacion": "5000 €",
+      "duracion": "25 años",
+      "emisionesCo2": "10 kg/año",
+      "continenteMaxProduccion": "Asia",
+      "continenteMinProduccion": "Antártida",
+      "paisMaxProduccion": "China",
+      "paisMinProduccion": "Islandia",
+      "img": "assets/solar.jpg"
+    },
+    {
+      "titulo": "Energía Eólica",
+      "subtitulo": "Energía del viento",
+      "descripcion": "Turbinas que generan electricidad.",
+      "costoDeUso": "0.03 €/kWh",
+      "costoDeInstalacion": "6000 €",
+      "duracion": "20 años",
+      "emisionesCo2": "5 kg/año",
+      "continenteMaxProduccion": "Europa",
+      "continenteMinProduccion": "África",
+      "paisMaxProduccion": "Alemania",
+      "paisMinProduccion": "Egipto",
+      "img": "assets/eolica.jpg"
+    }
+  ]
+  
